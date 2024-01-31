@@ -96,10 +96,7 @@ public class HelloController implements Initializable {
     }
     public void reloadVita()
     {
-        lblPvActuelAdversaire.setText(Integer.toString(m.getVieActuelle()));
-        lblPvMaxAdversaire.setText(Integer.toString(m.getVieMax()));
-        lblPvActuelPersonnage.setText(Integer.toString(p.getVieActuelle()));
-        lblPvMaxPersonnage.setText(Integer.toString(p.getVieMax()));
+        // Cette fonction doit mettre à jour les points de vie en combat.
     }
     public void modeCombat(Monstre m1, Monstre m2)
     {
@@ -153,15 +150,8 @@ public class HelloController implements Initializable {
     }
 
     public void goToAttaque(MouseEvent mouseEvent) {
-        int pvRestant = m.subirDegats(p.attaqueTotal());
-        if(pvRestant <= 0)
-        {
-            changeMap(apChoix);
-            invisible(apAffCombat);
-            p.augmenterAlea();
-            return;
-        }
-        attaqueMonstre();
+        // Votre personnage attaque l'adversaire. Après cela, c'est l'adversaire qui vous attaque. Si vous tombez à 0, fin du jeux.
+        // Si l'adversaire tombe à 0, augmente une des stats aléatoirement
 
     }
 
