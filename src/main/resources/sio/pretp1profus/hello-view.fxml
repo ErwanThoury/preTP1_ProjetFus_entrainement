@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sio.pretp1profus.HelloController">
+   <children>
+      <AnchorPane fx:id="apColosso" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Zones/Colosso.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apDesert" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Zones/Desert.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apForest" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Zones/Forest.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apSky" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Zones/Sky.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apChoix" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Zones/Choix.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="480.0" prefWidth="1024.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="857.0" layoutY="306.0" onMouseClicked="#goToSky" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/ZonesEffets/ball1.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="724.0" layoutY="161.0" onMouseClicked="#goToForest" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/ZonesEffets/ball4.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="351.0" layoutY="46.0" onMouseClicked="#goToDesert" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/ZonesEffets/ball2.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="228.0" layoutY="291.0" onMouseClicked="#goToColosso" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/ZonesEffets/ball3.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apAffCombat" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <VBox layoutX="704.0" prefHeight="480.0" prefWidth="320.0">
+               <children>
+                  <AnchorPane prefHeight="60.0" prefWidth="320.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/zoneVerte.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="60.0" prefWidth="320.0">
+                           <children>
+                              <Label fx:id="lblPvActuelPersonnage" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="120.0" text="250" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Tai Le Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="60.0" prefWidth="80.0" text="/" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Tai Le Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblPvMaxPersonnage" prefHeight="60.0" prefWidth="120.0" text="250" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Tai Le Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="imgPersonnage" fitHeight="320.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Personnages/Garet.gif" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="100.0" prefWidth="320.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToAttaque" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Images/Effet/Combat.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToFuite" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Images/Effet/Fuite.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToSoin" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Effet/Potion.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="480.0" prefWidth="320.0">
+               <children>
+                  <AnchorPane prefHeight="60.0" prefWidth="320.0">
+                     <children>
+                        <ImageView fx:id="imgMonstre" fitHeight="60.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/zoneRouge.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="60.0" prefWidth="320.0">
+                           <children>
+                              <Label fx:id="lblPvActuelAdversaire" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="120.0" text="250" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Tai Le Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="60.0" prefWidth="80.0" text="/" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Tai Le Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblPvMaxAdversaire" prefHeight="60.0" prefWidth="120.0" text="250" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft Tai Le Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="imgMonstre" fitHeight="320.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Monstres/ColossoBrigand.gif" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="60.0" prefWidth="320.0">
+                     <children>
+                        <ImageView fx:id="imgMonstre1" fitHeight="60.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/zoneRouge.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblNomAdversaire" alignment="CENTER" prefHeight="60.0" prefWidth="320.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apChoixPerso" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Zones/Menu.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="312.0" layoutY="180.0" prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="400.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToIsaac" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Menu/Isaac.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#GoToGareth" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Images/Menu/Garet.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#GoToIvan" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Images/Menu/Ivan.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToMia" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Menu/Mia.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToIsaac" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Menu/Isaac_lBlade_Front.gif" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#GoToGareth" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Images/Menu/Garet_Axe_Front.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#GoToIvan" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../Images/Menu/Ivan_Staff_Front.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#goToMia" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Menu/Mia_Staff_Front.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apFin" prefHeight="480.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/zoneFin.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
