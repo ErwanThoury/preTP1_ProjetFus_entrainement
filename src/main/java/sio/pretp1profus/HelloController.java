@@ -110,11 +110,14 @@ public class HelloController implements Initializable {
         {
             m = m2;
         }
+        /* Ce code est en commentaire car les fonctions ne sont pas définies encore
         m.setVieActuelle(m.getVieMax());
         changeImageViewImg(imgPersonnage, p.getImgURL());
         changeImageViewImg(imgMonstre, m.getImgURL());
         lblNomAdversaire.setText(m.getNom());
+        */
         reloadVita();
+
 
     }
     public void attaqueMonstre()
